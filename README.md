@@ -14,7 +14,7 @@ TODO: Add description on branching vs. forking
 
 ### With Branching:
 
-1. Cloning
+#### 1. Cloning
 
 To start, you'll need to **clone** this **remote** repository, which creates a **local** repository.
 
@@ -37,23 +37,23 @@ $ pwd
 /home/grace/<repository-name>
 ```
 
-2. Branching
+#### 2. Branching
 
 
-3. Adding/committing
+#### 3. Adding/committing
 
-4. Pushing
+#### 4. Pushing
 
-5. Updating your branch
+#### 5. Updating your branch
 
-6. Merging
+#### 6. Merging
 
-7. Making a Pull Request
+#### 7. Making a Pull Request
 
 
 ### With Forking:
 
-1. Forking
+#### 1. Forking
 
 Fork = copy (basically)
 
@@ -61,21 +61,21 @@ Go to the repository you want to fork: https://github.com/garoller/git-workshop
 
 Click the Fork button. This creates your own copy of the repository.
 
-Now go to https://github.com/<your-username>/git-workshop to find the fork.
+Now go to https://github.com/some-username/git-workshop to find the fork.
 
-2. See Cloning above.
+#### 2. See Cloning above.
 
-3. See Adding/committing above.
+#### 3. See Adding/committing above.
 
-4. See Pushing above.
+#### 4. See Pushing above.
 
-5. Updating your fork
+#### 5. Updating your fork
 
 Set upstream
 
-6. Merging
+#### 6. Merging
 
-7. Making a Pull Request
+#### 7. Making a Pull Request
 
 
 
