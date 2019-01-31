@@ -136,9 +136,18 @@ TODO: describe that branching and forking can be (and often are) done separately
 
 #### Setting up an SSH key
 
+TODO: Decide if we want to keep the SSH stuff
+
+Clone using SSH:
+```
+git clone git@github.com:your-username/git-tutorial.git
+```
+
 [Generating an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
 [Add SSH key to Github account](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+
 
 
 TODO: Slides - what git is, explain what the commands are doing, talk about why git -> version control is necessary
