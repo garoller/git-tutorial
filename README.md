@@ -112,15 +112,15 @@ TODO: describe that branching and forking can be (and often are) done separately
 ### Miscellaneous
 
 #### Git ignore
-
+TODO: this section
 
 #### Helpful commands
 
 `git log` - shows the local commit history
 
-`git status` - shows what branch you're currently on, and staged, unstages, and untracked files
+`git status` - shows what branch you're currently on, and staged, unstaged, and untracked files
 
-`git branch` - shows all of the your local branches
+`git branch` - shows all local branches
 
 `git stash` - removes all uncommitted changes from the working directory, but stores them to use for later
 
@@ -130,7 +130,7 @@ TODO: describe that branching and forking can be (and often are) done separately
 
 `git reset .` - unstages all staged files
 
-`git checkout <filename>` - checks out the file name a different, useful if you don't want to save changes made to a specific file
+`git checkout <filename>` - removes all uncommitted changes from `filename`
 
 `git reset HEAD~1` - removes the most recent commit 
 
