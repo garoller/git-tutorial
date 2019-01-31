@@ -10,39 +10,72 @@ TODO: Add some Git conceptual stuff here (mainly just local vs. remote)... or so
 
 Photo credit: [Jeff Jensen](https://www.intertech.com/Blog/introduction-to-git-concepts/)
 
+### What you need to have installed:
+1. A text editor of your choice (my favorite is [VS Code](https://code.visualstudio.com/docs/setup/setup-overview))
+2. Git on the command line
+    * TODO: find clear WSL installation instuctions
+    * Installation instructions for Linux and macOS [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
 TODO: Add description on branching vs. forking
 
-### With Forking:
+### With forking:
 
-#### 1. Forking
+#### 1. Create your own remote repository
 
-Fork = copy (basically)
+Go to the repository you want to fork, for this tutorial it's: https://github.com/garoller/git-workshop, and click the Fork button. This creates your own copy of the repository.
+Now go to https://github.com/your-username/git-workshop to find your forked repository.
 
-Go to the repository you want to fork: https://github.com/garoller/git-workshop
 
-Click the Fork button. This creates your own copy of the repository.
+#### 2. Create a local repository
 
-Now go to https://github.com/your-username/git-workshop to find the fork.
+To start, you'll need to **clone** the **remote** repository, which creates a **local** repository.
+```
+git clone https://github.com/your-username/git-tutorial.git
+```
+this creates a new directory at your current location. For example, if I type:
 
-#### 2. Cloning
+TODO: Clean up this language/flow
+```
+>> pwd
+/home/grace
+>> git clone https://github.com/your-username/git-tutorial.git
+```
 
-#### 3. Adding/committing
+Then, switch directories into your local repository:
+```
+>> cd git-tutorial
+>> pwd
+/home/grace/<repository-name>
+```
 
-#### 4. Pushing
+#### 3. Make and save changes
 
-#### 5. Updating your fork
-TODO: Add more description for why this is important
+```
+git add <path/file_with_changes>
+git commit -m "Descriptive commit message"
+```
+
+#### 4. Update your remote repo
+
+```
+git push origin master
+```
+
+#### 5. Update your fork with upstream changes
+
+TODO: Add more description for why this is important, define `upstream`
+
 Check your current remotes:
 ```
-$ git remote -v
+>> git remote -v
 origin	https://github.com/your-username/git-workshop.git (fetch)
 origin	https://github.com/your-username/git-workshop.git (push)
 ```
 
 Set upstream repository to the original repository:
 ```
-$ git remote add upstream git@github.com:garoller/git-tutorial.git
-$ git remote -v
+>> git remote add upstream git@github.com:garoller/git-tutorial.git
+>> git remote -v
 origin	https://github.com/garoller/git-workshop.git (fetch)
 origin	https://github.com/garoller/git-workshop.git (push)
 upstream	git@github.com:your-username/git-tutorial.git (fetch)
@@ -51,53 +84,61 @@ upstream	git@github.com:your-username/git-tutorial.git (push)
 
 Now, you can get updates from the upstream repository:
 ```
-$ git fetch upstream
-$ git merge upstream/master
+>> git fetch upstream
+>> git merge upstream/master
 ```
 
-#### 6. Merging
+#### 6. Resolving conflicts
 
-#### 7. Making a Pull Request
-
-
-### With Branching:
-
-#### 1. Cloning
-
-To start, you'll need to **clone** this **remote** repository, which creates a **local** repository.
-
-`git clone` creates a new directory at your current location. For example, if I type:
-
-TODO: Clean up this language/flow
-```
-$ pwd
-/home/grace
-```
-
-```
-$ git clone <repository-url>
-```
-
-Then, switch directories into your local repository:
-```
-$ cd <repository-name>
-$ pwd
-/home/grace/<repository-name>
-```
-
-#### 2. See Branching above
-
-#### 3. See Adding/committing above
-
-#### 4. See Pushing above
-
-#### 5. Updating your branch
-
-#### 6. Merging
-
-#### 7. Making a Pull Request
+#### 7. Making a pull request
 
 
-TODO: Add helpful commands, log, status, branch, stash, rolling back a commit, reset --hard, checking out specific files
+### Branching:
+
+#### 1. Create a local branch
+
+#### 2. See make and save changes above
+
+#### 3. See update your remote repo above
+
+#### 5. Update your branch with changes on remote master branch
+
+#### 6. Resolving conflicts
+
+#### 7. Making a pull request
+
+TODO: describe that branching and forking can be (and often are) done separately
+
+### Miscellaneous
+
+#### Git ignore
+
+
+#### Helpful commands
+
+`git log` - shows the local commit history
+
+`git status` - shows what branch you're currently on, and staged, unstages, and untracked files
+
+`git branch` - shows all of the your local branches
+
+`git stash` - removes all uncommitted changes from the working directory, but stores them to use for later
+
+`git stash pop` - applies the latest stashed changes back onto the working directory
+
+`git reset --hard` - deletes all uncommitted changes
+
+`git reset .` - unstages all staged files
+
+`git checkout <filename>` - checks out the file name a different, useful if you don't want to save changes made to a specific file
+
+`git reset HEAD~1` - removes the most recent commit 
+
+#### Setting up an SSH key
+
+[Generating an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
+[Add SSH key to Github account](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+
 
 TODO: Slides - what git is, explain what the commands are doing, talk about why git -> version control is necessary
