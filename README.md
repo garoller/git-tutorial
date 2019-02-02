@@ -13,8 +13,10 @@ Photo credit: [Jeff Jensen](https://www.intertech.com/Blog/introduction-to-git-c
 ### What you need to have installed:
 1. A text editor of your choice (my favorite is [VS Code](https://code.visualstudio.com/docs/setup/setup-overview))
 2. Git on the command line
-    * TODO: find clear WSL installation instuctions
-    * Installation instructions for Linux and macOS [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+    * Windows options:
+        - Use WSL (Windows Subsystem for Linux) and follow Linux instructions below for Ubuntu
+        - [Git download](https://git-scm.com/downloads). During installation select Git bash (UNIX emulator) or the Windows Command Prompt
+    * [Linux and macOS](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 TODO: Add description on branching vs. forking
 
@@ -44,7 +46,7 @@ Now go to https://github.com/your-username/git-workshop to find your forked repo
 
 To start, you'll need to **clone** the **remote** repository, which creates a **local** repository.
 ```
-git clone https://github.com/your-username/git-tutorial.git
+>> git clone https://github.com/your-username/git-tutorial.git
 ```
 this creates a new directory at your current location. For example, if I type:
 
@@ -65,14 +67,14 @@ Then, switch directories into your local repository:
 #### 3. Make and save changes
 
 ```
-git add <path/file_with_changes>
-git commit -m "Descriptive commit message"
+>> git add <path/file_with_changes>
+>> git commit -m "Descriptive commit message"
 ```
 
 #### 4. Update your remote repo
 
 ```
-git push origin master
+>> git push origin master
 ```
 
 #### 5. Update your fork with upstream changes
@@ -90,10 +92,10 @@ Set upstream repository to the original repository:
 ```
 >> git remote add upstream git@github.com:garoller/git-tutorial.git
 >> git remote -v
-origin	https://github.com/garoller/git-workshop.git (fetch)
-origin	https://github.com/garoller/git-workshop.git (push)
-upstream	git@github.com:your-username/git-tutorial.git (fetch)
-upstream	git@github.com:your-username/git-tutorial.git (push)
+origin	https://github.com/your-username/git-workshop.git (fetch)
+origin	https://github.com/your-username/git-workshop.git (push)
+upstream	git@github.com:garoller/git-tutorial.git (fetch)
+upstream	git@github.com:garoller/git-tutorial.git (push)
 ```
 
 Now, you can get updates from the upstream repository:
