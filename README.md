@@ -18,6 +18,20 @@ Photo credit: [Jeff Jensen](https://www.intertech.com/Blog/introduction-to-git-c
 
 TODO: Add description on branching vs. forking
 
+### Setup Git
+
+Tell Git who you are, so it can associate changes with your Github account:
+```
+>> git config --global user.name "your-username"
+>> git config --global user.email "your-email"
+```
+Check that it worked:
+```
+>> git config --list
+user.name=your-username
+user.email=your-email
+```
+
 ### With forking:
 
 #### 1. Create your own remote repository
