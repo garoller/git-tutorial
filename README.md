@@ -16,7 +16,7 @@ This tutorial is meant to take users through the basics of Git, starting from th
 
 ### Setup Git
 
-Tell Git who you are, so it can associate changes with your Github account:
+Tell Git who you are, so it can associate changes with your GitHub account:
 ```
 >> git config --global user.name "your-username"
 >> git config --global user.email "your-email"
@@ -43,7 +43,7 @@ Photo credit: [Jeff Jensen](https://www.intertech.com/Blog/introduction-to-git-c
 ### Branching vs. forking
 Creating a branch creates another list of commits with a different name.
 
-Forking a repository creates a separate copy of the repository, including it's all of it's branches, onto your account. 
+Forking a repository creates a separate copy of the repository, including all of its branches, that is under your control.
 
 Usually, projects will use either branching or forking to make changes, so be aware of what the project norm is an follow that method.
 
@@ -51,8 +51,8 @@ Usually, projects will use either branching or forking to make changes, so be aw
 
 #### 1. Create your own remote repository
 
-Go to the repository you want to fork, for this tutorial it's: https://github.com/garoller/git-tutorial, and click the Fork button. This creates your own copy of the repository.
-Now go to https://github.com/your-username/git-tutorial to find your forked repository.
+Go to the repository you want to fork (for this tutorial it's https://github.com/garoller/git-tutorial) and click the Fork button in the top right. This creates your own copy of the repository.
+Now go to https://github.com/YOUR-USERNAME/git-tutorial to find your forked repository.
 
 #### 2. Create a local repository
 
@@ -62,20 +62,20 @@ You'll **clone** the **remote** repository, which creates a **local** repository
 >> git clone https://github.com/your-username/git-tutorial.git
 ```
 
-This creates a new directory at the current location. For example, if I type:
+This creates a new directory at the current location. For example, type:
 
 ```
 >> pwd
 /home/grace
 ```
 
-to see my current path. Then, clone the repository:
+to see your current path. Then, clone the repository:
 
 ```
 >> git clone https://github.com/your-username/git-tutorial.git
 ```
 
-switch directories into the repository:
+And switch directories into the repository:
 
 ```
 >> cd git-tutorial
@@ -87,7 +87,7 @@ You'll edit files, add features and documentation, etc. in your local repository
 
 #### 3. Make and save changes
 
-Open the folder in with the text editor of your choice.
+Open the folder in the text editor of your choice.
 
 If you're using VS Code, type:
 
@@ -221,11 +221,11 @@ Now, you can update the remote repository with these new changes:
 
 #### 7. Making a pull request
 
-Up to this point, you've made changes to the original code base, updated your remote repositiory with those change, and now you want to contribute back to the original repo. 
+Up to this point, you've made changes to the original code base and updated your remote repositiory with those changes. Now you want to contribute back to the original repo.
 
 To do this you'll open a **pull request**. Pull requests basically just merge one bracnch into another. But, pull requests are often used so maintainers can make sure the code getting merged in works and is up to project standards. They're also a great way to get feedback on your code. 
 
-Go to your reposititory on Github. Click the **New pull request** button. Under the title **Open a pull request**, click the **compare across forks** option.
+Go to your reposititory on GitHub. Click the **New pull request** button. Under the title **Open a pull request**, click the **compare across forks** option.
 
 Set the following repositories and branches:
 Base repository: **garoller/git-tutorial**, and base: **master**.
@@ -283,7 +283,7 @@ regularly.
 
 The process for opening a PR from a branch is very similar to the process described for forking, with a few changes.
 
-Go to your reposititory on Github. Click the **New pull request** button. 
+Go to your reposititory on GitHub. Click the **New pull request** button.
 
 Set the following branches:
 base: **master**, compare: **your-branch**.
@@ -327,4 +327,4 @@ git clone git@github.com:your-username/git-tutorial.git
 
 [Generating an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
-[Add SSH key to Github account](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+[Add SSH key to GitHub account](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
