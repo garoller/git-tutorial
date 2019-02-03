@@ -58,38 +58,25 @@ Now go to https://github.com/YOUR-USERNAME/git-tutorial to find your forked repo
 
 You'll **clone** the **remote** repository, which creates a **local** repository.
 
-```
->> git clone https://github.com/your-username/git-tutorial.git
-```
-
-This creates a new directory at the current location. For example, type:
-
-```
->> pwd
-/home/grace
-```
-
-to see your current path. Then, clone the repository:
+Cloning creates a new directory at the current location.
 
 ```
 >> git clone https://github.com/your-username/git-tutorial.git
 ```
 
-And switch directories into the repository:
-
+Then
 ```
 >> cd git-tutorial
->> pwd
-/home/grace/git-tutorial
 ```
+to change directories into the newly cloned repository.
 
 You'll edit files, add features and documentation, etc. in your local repository.
 
 #### 3. Make and save changes
 
-Open the folder in the text editor of your choice.
+Open the **git-tutorial** folder in the text editor of your choice.
 
-If you're using VS Code, type:
+If you're using VS Code and have it installed, type:
 
 ```
 >> code .
@@ -97,7 +84,9 @@ If you're using VS Code, type:
 
 to open the current folder.
 
-Then, add your name to `Contributors` list in this file.
+If you're using a different text editor, you can look online for how to open the folder from your terminal. Or, you can open the text editor and go to **File > Open Folder**. Then select your **git-tutorial** folder. 
+
+Then, add your name to `Contributors` list in the `README.md`.
 
 After that you're ready to **stage** your changes.
 
@@ -177,10 +166,7 @@ You can update from the upstream repository:
 >> git fetch upstream
 >> git merge upstream/master
 ```
-To change the upstream url enter:
-```
-git remote set-url upstream https://github.com/garoller/git-tutorial.git
-```
+
 #### 6. Resolving conflicts
 
 At this step, you might have encountered a merge conflict. If not though, that's great, and you're ready for the next step.
