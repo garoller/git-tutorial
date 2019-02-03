@@ -1,4 +1,4 @@
-## git-workshop
+## git-tutorial
 
 Contributors: <your-name-here>
 
@@ -8,7 +8,7 @@ TODO: Add overview/purpose of this workshop
 
 TODO: Add some Git conceptual stuff here (mainly just local vs. remote)... or somewhere else?
 
-![Git conceptual](https://github.com/garoller/git-workshop/raw/master/images/git-conceptual.png)
+![Git conceptual](https://github.com/garoller/git-tutorial/raw/master/images/git-conceptual.png)
 
 Photo credit: [Jeff Jensen](https://www.intertech.com/Blog/introduction-to-git-concepts/)
 
@@ -35,15 +35,19 @@ user.email=your-email
 ```
 
 ### Branching vs. forking
-Creating a branch copies the code from one brach and allows you to 
-Forking a repository creates a separate copy of the repository, including it's all of it's branches, under your account. 
+TODO: finish branch definition
+Creating a branch ...
+
+Forking a repository creates a separate copy of the repository, including it's all of it's branches, onto your account. 
+
+TODO: describe that branching and forking can be (and often are) done separately
 
 ### With forking:
 
 #### 1. Create your own remote repository
 
-Go to the repository you want to fork, for this tutorial it's: https://github.com/garoller/git-workshop, and click the Fork button. This creates your own copy of the repository.
-Now go to https://github.com/your-username/git-workshop to find your forked repository.
+Go to the repository you want to fork, for this tutorial it's: https://github.com/garoller/git-tutorial, and click the Fork button. This creates your own copy of the repository.
+Now go to https://github.com/your-username/git-tutorial to find your forked repository.
 
 
 #### 2. Create a local repository
@@ -54,7 +58,7 @@ You'll **clone** the **remote** repository, which creates a **local** repository
 >> git clone https://github.com/your-username/git-tutorial.git
 ```
 
-this creates a new directory at the current location. For example, if I type:
+This creates a new directory at the current location. For example, if I type:
 
 ```
 >> pwd
@@ -74,6 +78,8 @@ switch directories into the repository:
 >> pwd
 /home/grace/git-tutorial
 ```
+
+You'll edit files, add features and documentation, etc. in your local repository.
 
 #### 3. Make and save changes
 
@@ -116,7 +122,7 @@ To stage your changes:
 
 Type `git status` again to see the difference.
 
-Now that you're changes are staged, you can save them to Git, by making a **commit**.
+Now that you're changes are staged, you can save them to Git by making a **commit**.
 
 ```
 >> git commit -m "Add name to contributor list"
@@ -124,43 +130,40 @@ Now that you're changes are staged, you can save them to Git, by making a **comm
 
 The `-m` flag stands for message, which allows you to enter the commit message inline, rather than opening a text editor in the terminal, which can be confusing to navigate.
 
-Now, type `git status` again and notice the difference.
+Now, type `git status` again and see the difference.
 
-To see your commit, enter `git log`.
+To see your commit, enter `git log`, and type `q` to exit.
 
 #### 4. Update your remote repo
 
-Now that you've made your first commit on the **local** repository, you want those changes to be reflected on the **remote** repository. To do that, enter:
+Now that you've made your first commit on the **local** repository, you want those changes to be reflected on the **remote** repository. To do that, you'll **push** your changes:
 ```
 >> git push origin master
 ```
 
-Take a look at the `README.md` on your account's git-workshop repo to see your changes!
+Take a look at the `README.md` on your account's git-tutorial repo to see your changes!
 
 #### 5. Update your fork with upstream changes
 
-# Should we switch the order of 4 & 5?
-
-
-At this point, after you've made changes and pushe them to the remote, the next steps are getting ready to integrate your changes into the original repository. 
+At this point, after you've made changes and pushed them to the remote, the next steps are getting ready to integrate your changes into the original repository. 
 The repository where you forked from is known as the **upstream** repository, and the forked repository is the **downstream**.
-In this tutorial, upstream = garoller/git-workshop and downstream = your-username/git-workshop.
+In this tutorial, upstream = garoller/git-tutorial and downstream = your-username/git-tutorial.
 
-Since you cloned the repository from your account, **origin** is your-username/git-workshop.
+Since you cloned the repository from your account, **origin** is your-username/git-tutorial.
 
 To verify this, check your current remotes:
 ```
 >> git remote -v
-origin	https://github.com/your-username/git-workshop.git (fetch)
-origin	https://github.com/your-username/git-workshop.git (push)
+origin	https://github.com/your-username/git-tutorial.git (fetch)
+origin	https://github.com/your-username/git-tutorial.git (push)
 ```
 
 Now, you can add the upstream repository to your remotes:
 ```
 >> git remote add upstream git@github.com:garoller/git-tutorial.git
 >> git remote -v
-origin	https://github.com/your-username/git-workshop.git (fetch)
-origin	https://github.com/your-username/git-workshop.git (push)
+origin	https://github.com/your-username/git-tutorial.git (fetch)
+origin	https://github.com/your-username/git-tutorial.git (push)
 upstream	git@github.com:garoller/git-tutorial.git (fetch)
 upstream	git@github.com:garoller/git-tutorial.git (push)
 ```
@@ -173,12 +176,60 @@ You can update from the upstream repository:
 
 #### 6. Resolving conflicts
 
-At this step, you might have encountered a merge conflict. 
+At this step, you might have encountered a merge conflict. If not though, that's great, and you're ready for the next step.
 
-If you don't have any merge conflicts though, that's great, and you're ready for
-the next step.
+If you do have a merge conflict, don't worry!
+You might be seeing output similar to this:
+```
+>> git merge upstream/master
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+Basically, merge conflicts happen when the same line has been modified, and Git doesn't know which change(s) to keep. This requires a human to manually decide.
+Open the file where the conflict is. In this tutorial, open `README.md`. If you're using VS Code, you should see `HEAD` (current change) and `upstream/master` (incoming change). Pick whether you want to keep only one of the changes or both. Also, make sure you remove the labels and the arrows from the file.
+
+Save your file, and head back to the terminal. Type 
+```
+>> git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+	both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+and then enter:
+```
+git add README.md
+git commit -m "Resolve merge conflict"
+```
+
+resolve the merge conflict.
+Now, you can update the remote repository with these new changes:
+```
+git push origin master
+```
 
 #### 7. Making a pull request
+
+Up to this point, you've made changes to the original code base, updated your remote repositiory with those change, and now you want to contribute back to the original repo. 
+
+To do this you'll open a **pull request**. Pull requests basically just merge one bracnch into another. But, pull requests are often used so maintainers can make sure the code getting merged in works and is up to project standards. They're also a great way to get feedback on your code. 
+
+Go to your reposititory on Github. Click the **New pull request** button. Under the title **Open a pull request**, click the **compare across forks** option.
+
+Set the following repositories and branches:
+Base repository: **garoller/git-tutorial**, and base: **master**.
+Head repository: **your-username/git-tutorial**, and base: **master**.
+
+After this you should see a message: **Able to merge**.
+
+Now enter a descriptive title and description for your PR. Click **Create pull request**.
 
 
 ### Branching:
@@ -226,7 +277,16 @@ regularly.
 
 #### 7. Making a pull request
 
-TODO: describe that branching and forking can be (and often are) done separately
+The process for opening a PR from a branch is very similar to the process described for forking, with a few changes.
+
+Go to your reposititory on Github. Click the **New pull request** button. 
+
+Set the following branches:
+base: **master**, compare: **your-branch**.
+
+After this you should see a message: **Able to merge**.
+
+Now enter a descriptive title and description for your PR. Click **Create pull request**.
 
 ### Miscellaneous
 
