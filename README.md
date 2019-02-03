@@ -4,13 +4,7 @@ Contributors: <your-name-here>
 
 Thank you to [Daniele Procida](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html) and [Nicola Paolucci](https://www.atlassian.com/git/articles/git-forks-and-upstreams) for their amazing Git resources!
 
-TODO: Add overview/purpose of this workshop
-
-TODO: Add some Git conceptual stuff here (mainly just local vs. remote)... or somewhere else?
-
-![Git conceptual](https://github.com/garoller/git-tutorial/raw/master/images/git-conceptual.png)
-
-Photo credit: [Jeff Jensen](https://www.intertech.com/Blog/introduction-to-git-concepts/)
+This tutorial is meant to take users through the basics of Git, starting from the beginning and through making changes and opening a pull request, using both branching and forking to do this.
 
 ### What you need to have installed:
 1. A text editor of your choice (my favorite is [VS Code](https://code.visualstudio.com/docs/setup/setup-overview))
@@ -34,13 +28,24 @@ user.name=your-username
 user.email=your-email
 ```
 
+### Git conceptual
+Remote repositories vs. local repositories
+
+A **remote repository** is hosted on a website like Github, Gitlab, or Bitbucket.
+
+A **local repository** is hosted on a computer, where people can set up their own environments, test the code, and make changes.
+
+This diagrams the remote and local repositories and how they interact:
+![Git conceptual](https://github.com/garoller/git-tutorial/raw/master/images/git-conceptual.png)
+
+Photo credit: [Jeff Jensen](https://www.intertech.com/Blog/introduction-to-git-concepts/)
+
 ### Branching vs. forking
-TODO: finish branch definition
-Creating a branch ...
+Creating a branch creates another list of commits with a different name.
 
 Forking a repository creates a separate copy of the repository, including it's all of it's branches, onto your account. 
 
-TODO: describe that branching and forking can be (and often are) done separately
+Usually, projects will use either branching or forking to make changes, so be aware of what the project norm is an follow that method.
 
 ### With forking:
 
@@ -48,7 +53,6 @@ TODO: describe that branching and forking can be (and often are) done separately
 
 Go to the repository you want to fork, for this tutorial it's: https://github.com/garoller/git-tutorial, and click the Fork button. This creates your own copy of the repository.
 Now go to https://github.com/your-username/git-tutorial to find your forked repository.
-
 
 #### 2. Create a local repository
 
@@ -291,7 +295,8 @@ Now enter a descriptive title and description for your PR. Click **Create pull r
 ### Miscellaneous
 
 #### Git ignore
-TODO: this section
+A `.gitignore` is used so that Git will ignore certain files. If a file is the your `.gitignore`, it will not appear when you type `git status`.
+Git ignore files are useful for things that you need to run your project locally, but don't want on your public, remote repository, like config files, anything files with secret keys, log files, database files, etc.
 
 #### Helpful commands
 
