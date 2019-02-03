@@ -1,6 +1,6 @@
 ## git-tutorial
 
-Contributors: <your-name-here>
+Contributors: <christurgeon>
 
 Thank you to [Daniele Procida](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html) and [Nicola Paolucci](https://www.atlassian.com/git/articles/git-forks-and-upstreams) for their amazing Git resources!
 
@@ -149,7 +149,7 @@ Take a look at the `README.md` on your account's git-tutorial repo to see your c
 
 #### 5. Update your fork with upstream changes
 
-At this point, after you've made changes and pushed them to the remote, the next steps are getting ready to integrate your changes into the original repository. 
+At this point, after you've made changes and pushed them to the remote, the next steps are getting ready to integrate your changes into the original repository.
 The repository where you forked from is known as the **upstream** repository, and the forked repository is the **downstream**.
 In this tutorial, upstream = garoller/git-tutorial and downstream = your-username/git-tutorial.
 
@@ -193,7 +193,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 Basically, merge conflicts happen when the same line has been modified, and Git doesn't know which change(s) to keep. This requires a human to manually decide.
 Open the file where the conflict is. In this tutorial, open `README.md`. If you're using VS Code, you should see `HEAD` (current change) and `upstream/master` (incoming change). Pick whether you want to keep only one of the changes or both. Also, make sure you remove the labels and the arrows from the file.
 
-Save your file, and head back to the terminal. Type 
+Save your file, and head back to the terminal. Type
 ```
 >> git status
 On branch master
@@ -223,7 +223,7 @@ Now, you can update the remote repository with these new changes:
 
 Up to this point, you've made changes to the original code base and updated your remote repositiory with those changes. Now you want to contribute back to the original repo.
 
-To do this you'll open a **pull request**. Pull requests basically just merge one bracnch into another. But, pull requests are often used so maintainers can make sure the code getting merged in works and is up to project standards. They're also a great way to get feedback on your code. 
+To do this you'll open a **pull request**. Pull requests basically just merge one bracnch into another. But, pull requests are often used so maintainers can make sure the code getting merged in works and is up to project standards. They're also a great way to get feedback on your code.
 
 Go to your reposititory on GitHub. Click the **New pull request** button. Under the title **Open a pull request**, click the **compare across forks** option.
 
@@ -240,7 +240,7 @@ Now enter a descriptive title and description for your PR. Click **Create pull r
 
 #### 1. Create a local branch
 
-Create a new branch, 
+Create a new branch,
 ```
 >> git checkout -b new-branch-name
 ```
@@ -257,7 +257,7 @@ Make any change(s) you wish to the file on your `new-branch-name`, and add and c
 
 #### 3. Update your remote repo
 
-The steps are almost the same as above, except instead of pushing to remote `master`, you'll want to create a remote branch `new-branch-name`. 
+The steps are almost the same as above, except instead of pushing to remote `master`, you'll want to create a remote branch `new-branch-name`.
 
 By entering:
 ```
@@ -316,7 +316,7 @@ Git ignore files are useful for things that you need to run your project locally
 
 `git checkout <filename>` - removes all uncommitted changes from `filename`
 
-`git reset HEAD~1` - removes the most recent commit 
+`git reset HEAD~1` - removes the most recent commit
 
 #### Setting up an SSH key
 
