@@ -164,12 +164,12 @@ origin	https://github.com/your-username/git-tutorial.git (push)
 
 Now, you can add the upstream repository to your remotes:
 ```
->> git remote add upstream git@github.com:garoller/git-tutorial.git
+>> git remote add upstream https://github.com/garoller/git-tutorial.git
 >> git remote -v
 origin	https://github.com/your-username/git-tutorial.git (fetch)
 origin	https://github.com/your-username/git-tutorial.git (push)
-upstream	git@github.com:garoller/git-tutorial.git (fetch)
-upstream	git@github.com:garoller/git-tutorial.git (push)
+upstream https://github.com/garoller/git-tutorial.git (fetch)
+upstream https://github.com/garoller/git-tutorial.git (push)
 ```
 
 You can update from the upstream repository:
@@ -177,7 +177,10 @@ You can update from the upstream repository:
 >> git fetch upstream
 >> git merge upstream/master
 ```
-
+To change the upstream url enter:
+```
+git remote set-url upstream https://github.com/garoller/git-tutorial.git
+```
 #### 6. Resolving conflicts
 
 At this step, you might have encountered a merge conflict. If not though, that's great, and you're ready for the next step.
