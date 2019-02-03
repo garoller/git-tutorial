@@ -205,14 +205,14 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 and then enter:
 ```
-git add README.md
-git commit -m "Resolve merge conflict"
+>> git add README.md
+>> git commit -m "Resolve merge conflict"
 ```
 
 resolve the merge conflict.
 Now, you can update the remote repository with these new changes:
 ```
-git push origin master
+>> git push origin master
 ```
 
 #### 7. Making a pull request
@@ -257,17 +257,17 @@ The steps are almost the same as above, except instead of pushing to remote `mas
 
 By entering:
 ```
-git push origin new-branch name
+>> git push origin new-branch name
 ```
 
-the remote `new-branch-name` is created if it doesnt exist already.
+the remote `new-branch-name` is created if it doesn't exist already.
 
 #### 5. Update your branch with changes on remote master branch
 
 If the project you're working on uses branching, you don't have to worry about an upstream repository. Instead, other contributors working on the same project will update the remote master. To make sure you're working with the current code base and to resolve any conflicts locally it is good to:
 ```
-git fetch
-git merge origin/master
+>> git fetch
+>> git merge origin/master
 ```
 
 regularly.
