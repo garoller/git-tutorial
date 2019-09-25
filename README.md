@@ -1,10 +1,10 @@
 ## git-tutorial
 
-Contributors: Sidney Kochman, Grace Roller 
+Contributors: Sidney Kochman, Grace Roller
 
 Thank you to [Daniele Procida](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html) and [Nicola Paolucci](https://www.atlassian.com/git/articles/git-forks-and-upstreams) for their amazing Git resources!
 
-[Git slides](https://docs.google.com/presentation/d/1WZPPLVnQqDllOHZAlbT6mtVFZ4tGeuYZYLADNsG4KHU/edit?usp=sharing)
+Thank you to [Ethan Graf](https://github.com/eagraf) for the [Git slides](https://docs.google.com/presentation/d/1WZPPLVnQqDllOHZAlbT6mtVFZ4tGeuYZYLADNsG4KHU/edit?usp=sharing)!
 
 This tutorial is meant to take users through the basics of Git, starting from the beginning and through making changes and opening a pull request, using both branching and forking to do this.
 
@@ -305,9 +305,10 @@ Git ignore files are useful for things that you need to run your project locally
 
 `git reset .` - unstages all staged files
 
-`git checkout <filename>` - removes all uncommitted changes from `filename`
-
 `git reset HEAD~1` - removes the most recent commit 
+
+`git checkout <filename>` - remove all uncommitted changes from `filename`
+
 
 #### Setting up an SSH key
 
