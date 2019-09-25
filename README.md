@@ -214,7 +214,7 @@ Now, you can update the remote repository with these new changes:
 
 Up to this point, you've made changes to the original code base and updated your remote repositiory with those changes. Now you want to contribute back to the original repo.
 
-To do this you'll open a **pull request**. Pull requests basically just merge one bracnch into another. But, pull requests are often used so maintainers can make sure the code getting merged in works and is up to project standards. They're also a great way to get feedback on your code. 
+To do this you'll open a **pull request**. Pull requests basically just merge one branch into another. But, pull requests are often used so maintainers can make sure the code getting merged in works and is up to project standards. They're also a great way to get feedback on your code. 
 
 Go to your reposititory on GitHub. Click the **New pull request** button. Under the title **Open a pull request**, click the **compare across forks** option.
 
