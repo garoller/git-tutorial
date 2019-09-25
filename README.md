@@ -1,6 +1,6 @@
 ## git-tutorial
 
-Contributors: Sidney Kochman, Grace Roller, Sean Heffernan, Andrew Qu, Grace Roller
+Contributors: Sidney Kochman, Grace Roller, Sean Heffernan, Andrew Qu, Hannah Lim
 
 Thank you to [Daniele Procida](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html) and [Nicola Paolucci](https://www.atlassian.com/git/articles/git-forks-and-upstreams) for their amazing Git resources!
 
