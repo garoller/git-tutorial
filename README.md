@@ -4,7 +4,7 @@ Contributors: Sidney Kochman, Hannah Lim, Andrew Qu, Grace Roller
 
 Thank you to [Daniele Procida](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html) and [Nicola Paolucci](https://www.atlassian.com/git/articles/git-forks-and-upstreams) for their amazing Git resources!
 
-Thank you to [Ethan Graf](https://github.com/eagraf) for the [Git slides](https://docs.google.com/presentation/d/1WZPPLVnQqDllOHZAlbT6mtVFZ4tGeuYZYLADNsG4KHU/edit?usp=sharing)!
+Thank you to [Ethan Graf](https://github.com/eagraf) for the [Git slides](https://docs.google.com/presentation/d/1EIkRSxmPrKJvb373zW4Cls1yrxembkBJAa-_ZD3_ZNs/edit?usp=sharing)!
 
 This tutorial is meant to take users through the basics of Git, starting from the beginning and through making changes and opening a pull request, using both branching and forking to do this.
 
